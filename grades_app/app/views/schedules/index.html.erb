@@ -1,0 +1,16 @@
+<h1>Schedules#index</h1>
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <% @schedules.each do |schedule| %>
+            <div class="col-md-4 text-truncate">
+                <%= link_to schedule.title, schedule_path(schedule)%>
+            </div>
+        <% end %>
+    </div>
+
+</div> <!-- /container -->
+
+<div class="New Schedule d-flex justify-content-center">
+    <%= link_to 'New Schedule', new_schedule_path, class: "btn btn-primary btn-sm"%>
+  </div>
